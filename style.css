@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #000;
+  color: #f2f2f2;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Линии */
+.lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.line {
+  width: 1px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
+  animation: drop 7s infinite;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1)::after { background: linear-gradient(to bottom, transparent 0%, #e1ff00 75%, #ccff00 100%); animation-delay: .5s; }
+.line:nth-child(2)::after { background: linear-gradient(to bottom, transparent 0%, #cd3232 75%, #cd3232 100%); animation-delay: 1s; }
+.line:nth-child(3)::after { background: linear-gradient(to bottom, transparent 0%, #00FFFF 75%, #00FFFF 100%); animation-delay: 1.5s; }
+.line:nth-child(4)::after { background: linear-gradient(to bottom, transparent 0%, #FF1493 75%, #FF1493 100%); animation-delay: 2s; }
+.line:nth-child(5)::after { background: linear-gradient(to bottom, transparent 0%, #FFD700 75%, #FFD700 100%); animation-delay: 2.5s; }
+.line:nth-child(6)::after { background: linear-gradient(to bottom, transparent 0%, #2f00ff 75%, #bb00ff 100%);animation-delay: 3s; }
+.line:nth-child(7)::after { background: linear-gradient(to bottom, transparent 0%, #00ff44 75%, #04ff00 100%);animation-delay: 3.5s; }
+.line:nth-child(8)::after { background: linear-gradient(to bottom, transparent 0%, #bb1d1d 75%, #ff0000 100%);animation-delay: 4s; }
+.line:nth-child(9)::after { background: linear-gradient(to bottom, transparent 0%, #d42b82 75%, #c72b62 100%);animation-delay: 4.5s; }
+.line:nth-child(10)::after { background: linear-gradient(to bottom, transparent 0%, #ffffff 75%, #fafafa 100%);animation-delay: 5s; }
+
+@keyframes drop {
+  0% { top: -50%; }
+  100% { top: 110%; }
+}
+
+/* Заголовок */
+.h1-1 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+  margin: 5% auto;
+  color: #ff0000;
+  background: linear-gradient(rgba(151, 0, 0, 0.534), rgba(0, 0, 0, 0.534));
+  border-radius: 10px;
+  animation: fadeInDown 2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Навигация */
+nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  background: rgba(0,0,0,0.8);
+  border: 2px solid rgba(97, 49, 49, 0.7);
+  border-radius: 10px;
+  padding: 15px 30px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: rgb(79, 199, 86);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: all .3s;
+  display: block;
+}
+
+nav ul li:hover > a {
+  color: rgb(2, 115, 150);
+  transform: scale(1.1);
+}
+
+/* Выпадающее меню */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(20,20,20,0.9);
+  border-radius: 5px;
+  padding: 10px;
+  list-style: none;
+  border: 1px solid rgba(97,49,49,0.7);
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li a {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+/* Футер */
+footer {
+  margin-top: auto;
+  background: rgba(0,0,0,0.9);
+  border-top: 2px solid rgba(97,49,49,0.7);
+  color: #c32f35;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+footer .vers {
+  font-family: cursive;
+}
+
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .h1-1 {
+    font-size: 2rem;
+    margin: 20px auto;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

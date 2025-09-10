@@ -1,0 +1,76 @@
+body{
+    background-image: url("https://img.freepik.com/free-vector/blurred-winter-background-hills-snow_52683-48945.jpg?t=st=1733386746~exp=1733390346~hmac=08ddee18b3ab300c6f54f1f22b6b974bc24059a029b7bd8aedb3d96a72887c02&w=1800");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.conteiner{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    align-items: flex-end;
+    border: 8px solid rgb(152, 0, 182);
+}
+.conteiner div{
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid blue;
+    text-align: center;
+}
+.WildLevko {background-color: rgb(255, 225, 0);
+    height: 400px;
+}
+.Vika {background-color: rgb(255, 106, 0);
+    height: 410px;
+}
+.RomaTimohin {background-color: rgb(0, 238, 255);
+    height: 343px;
+}
+.Tamila {background-color: rgb(125, 199, 246);
+    height: 222px;
+}
+.Slava {background-color: rgb(125, 199, 246);
+    height: 126px;
+}
+.conteiner2{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-start;
+    align-items: flex-end;
+    border: 8px solid rgb(152, 0, 182);
+}
+.conteiner2 div{
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid blue;
+    text-align: center;
+}
+.DanyaYacsha {background-color: rgb(125, 199, 246);
+    height: 78px;
+}
+.Timur {background-color: rgb(125, 199, 246);
+    height: 75px;
+}
+.Maria {background-color: rgb(131, 131, 131);
+}
+.Dasha {background-color: rgb(131, 131, 131);
+}
+.Katrin {background-color: rgb(131, 131, 131);
+}
+.Misha {background-color: rgb(131, 131, 131);
+}
+.Maksim {background-color: rgb(131, 131, 131);
+}
+.h1-4{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.466);
+    font-size: 40px;
+    margin-left: 555px;
+    border: 2px dashed whitesmoke;
+    font-family:'Courier New', Courier, monospace;
+}

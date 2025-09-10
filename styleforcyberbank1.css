@@ -1,0 +1,97 @@
+/* styleforcyberbank1.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black; /* или оставить фон как есть */
+  position: relative;
+  z-index: 1;
+}
+
+#matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* чтобы было позади всего текста */
+  background: black;
+}
+
+
+
+/* Заголовок "Money" */
+.cyberbankleadorboard1 {
+  text-align: center;
+  color: rgb(251, 234, 89);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(251, 200, 89, 0.5);
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  backdrop-filter: blur(6px);
+}
+
+/* Стили балансов */
+#spisok2, #spisok3, .spisok4 {
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  font-size: 25px;
+  margin: 15px auto;
+  max-width: 800px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.781);
+  border-left: 4px solid cyan;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#spisok2 { color: rgb(247, 255, 18); border-left-color: rgb(168, 200, 105); }
+#spisok3 { color: rgb(126, 189, 205); border-left-color: rgb(102, 196, 196); }
+.spisok4 { color: rgb(167, 211, 170); border-left-color: rgb(63, 156, 69); }
+
+.spisok4:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.5);
+}
+#spisok2:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(255, 213, 0, 0.5);
+}
+#spisok3:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+}
+
+/* Ссылка назад */
+footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer .h1-4 {
+  display: inline-block;
+  padding: 12px 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px dashed whitesmoke;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer .h1-4:hover {
+  color: rgb(255, 174, 0);
+  border-color: rgb(255, 191, 0);
+  box-shadow: 0 0 20px rgb(255, 238, 0);
+  transform: scale(1.1);
+}

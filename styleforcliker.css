@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(-45deg, #1e3b13, #7a680e, #0e471c, #f8ff1e);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.h1-4{
+    color:rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.466);
+    font-size: 40px;
+    border: 2px dashed whitesmoke;
+    font-family:'Courier New', Courier, monospace;
+}
+.h1-1{
+    color:rgb(73, 210, 164);
+    text-align: center;
+    font-size: 100px;
+    background-color: rgba(0, 0, 0, 0.647);
+    border-radius: 10px;
+    margin-top: 260px;
+    font-family:'Courier New', Courier, monospace;
+}
+.click{
+    background-color: rgba(143, 95, 46, 0.695);
+    border-radius: 10px;
+    text-align: center;
+    border: 3px double rgba(200, 255, 0, 0.678);
+    width: 50%;
+    font-size: 25px;
+    font-family: cursive;
+    color: rgb(34, 171, 201);
+    padding: 30px;
+}
+.clickdiv{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+.click:hover{
+    font-size: 40px;
+    color:olivedrab ;
+}
+.click:active{
+    font-size: 35px;
+    color:rgb(99, 30, 21) ;
+}
+
+footer {
+  text-align: center;
+  margin: 50px auto;
+}
+
+
+.back-home {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 25px;
+  border: 2px dashed #dcff2e;
+  border-radius: 12px;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 42, 0.5);
+}
+
+.back-home:hover {
+  background: #89ff2e;
+  color: #000;
+  box-shadow: 0 0 20px #2effd5, 0 0 40px #0ff;
+}

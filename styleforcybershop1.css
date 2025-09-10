@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Courier New', monospace;
+  
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Canvas на фон */
+#matrix-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  background: black;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.main-title {
+  font-size: 60px;
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 20px rgb(255, 72, 0);
+}
+
+.subtitle {
+  font-size: 20px;
+  color: lime;
+  text-shadow: 0 0 10px lime;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.shop {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid cyan;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px cyan;
+}
+
+.shop-title {
+  font-size: 24px;
+  color: lime;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px lime;
+}
+
+.Killing .shop {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Killing .shop:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgb(255, 0, 0);
+}
+
+.Killing .shop-title {
+  font-size: 24px;
+  color: rgb(105, 6, 6);
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgb(161, 10, 134);
+}
+
+.Elite{
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgb(255, 119, 0);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 145, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Elite:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgb(255, 213, 0);
+}
+
+.Elite-title {
+  font-size: 24px;
+  color: rgb(228, 194, 3);
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgb(161, 10, 10);
+}
+
+.products {
+  display: grid;
+  gap: 10px;
+}
+
+.product {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border-left: 4px solid rgb(9, 154, 52);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.product:hover {
+  background: rgba(0, 102, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.Elproduct {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border-left: 4px solid rgb(226, 226, 13);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.Elproduct:hover {
+  background: rgba(51, 255, 0, 0.2);
+  transform: translateX(5px);
+}
+
+.Killing .product {
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border-left: 4px solid rgb(154, 9, 9);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.Killing .product:hover {
+  background: rgba(255, 0, 0, 0.2);
+  transform: translateX(5px);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+}
+
+.back-home {
+  color: white;
+  background: rgba(0,0,0,0.6);
+  border: 2px dashed whitesmoke;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-home:hover {
+  color: cyan;
+  border-color: cyan;
+  box-shadow: 0 0 20px cyan;
+  transform: scale(1.1);
+}
