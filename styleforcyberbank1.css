@@ -40,7 +40,7 @@ body {
 }
 
 /* Стили балансов */
-#spisok2, #spisok3, .spisok4 {
+#spisok2, #spisok3, .spisok4, .spisokWARN {
   text-align: left;
   font-family: 'Courier New', monospace;
   font-size: 25px;
@@ -56,10 +56,11 @@ body {
 #spisok2 { color: rgb(247, 255, 18); border-left-color: rgb(168, 200, 105); }
 #spisok3 { color: rgb(126, 189, 205); border-left-color: rgb(102, 196, 196); }
 .spisok4 { color: rgb(167, 211, 170); border-left-color: rgb(63, 156, 69); }
+.spisokWARN { color: rgb(211, 167, 167); border-left-color: rgb(184, 57, 57); box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
 
-.spisok4:hover {
+.spisok4:hover{
   transform: translateX(10px);
-  box-shadow: 0 0 20px rgba(255, 60, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 174, 255, 0.5);
 }
 #spisok2:hover {
     transform: translateX(10px);
@@ -68,6 +69,11 @@ body {
 #spisok3:hover {
     transform: translateX(10px);
     box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+}
+
+.spisokWARN:hover {
+  transform: translateX(10px);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
 }
 
 /* Ссылка назад */
