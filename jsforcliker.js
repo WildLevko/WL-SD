@@ -1,10 +1,24 @@
-var counter = 0;
-var interval;
+let counter = 0;
+let lastClickTime = 0;
+const minClickInterval = 100; // ms — разрешаем кликать быстро (10 кликов/сек)
+
 function inc() {
-counter++;
-upd();
+    const now = Date.now();
+    if (now - lastClickTime < minClickInterval) {
+        return; // игнорируем слишком быстрые клики
+    }
+    lastClickTime = now;
+    counter++;
+    upd();
 }
+
 function upd() {
-    var counterElement = document.getElementById("counter");
+    const counterElement = document.getElementById("counter");
     counterElement.textContent = counter;
+
+    // плавная анимация увеличения
+    counterElement.parentElement.style.transform = "scale(1.1)";
+    setTimeout(() => {
+        counterElement.parentElement.style.transform = "scale(1)";
+    }, 150);
 }
